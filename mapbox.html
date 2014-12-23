@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href='http://www.gannett-cdn.com/experiments/usatoday/_common/_maps/mapbox.css' rel='stylesheet' />
+<!--[if lte IE 8]>
+<link href='http://usatoday30.usatoday.com/maps/library/mapbox-ie.css' rel='stylesheet' >
+<![endif]-->
+
+<style>
+body { 
+    margin:0; 
+    padding:0; 
+}
+#map { 
+    width:1000px; 
+    height:510px; 
+}
+</style>
+
+</head>
+<body>
+
+    <div id='map'></div>
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+    <script src='http://usatoday30.usatoday.com/maps/library/leaflet-hash.js'></script>
+    <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/jquery-1.11.0.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+    <script type='text/javascript'>
+
+        $(document).ready(function(){
+            // Provide your access token
+            L.mapbox.accessToken = 'pk.eyJ1IjoidXNhdG9kYXlncmFwaGljcyIsImEiOiJ0S3BGdndrIn0.5juF5LWz_GRcndian32tZA';
+            // Create a map in the div #map
+           var map = L.mapbox.map('map', 'usatodaygraphics.basemap');
+           map.setView([37.182202, -96.273194], 4);
+
+            // var featureLayer = omnivore.topojson('js/data/us.json').addTo(map);
+
+         var arrestLayer = L.mapbox.tileLayer("usatodaygraphics.s6kr19k9").addTo(map);
+         // var arrestLayer = L.mapbox.tileLayer("usatodaygraphics.ac7803f7").addTo(map);
+
+          // var features2 = L.mapbox.featureLayer("usatodaygraphics.ac7803f7").addTo(map);
+
+        });
+
+        
+
+
+    </script>
+
+</body>
+</html>

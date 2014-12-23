@@ -1,0 +1,8 @@
+<div class="state-nav-close-button"><img src="img/close.svg" alt="close" class="close-icon"></div>
+<h2 class="nav-header">Select State: </h2>
+<ul class="state-nav-list">
+<% _.each(states, function(state) { %>
+<li class="state-entry" data-abbr ="<%= state.abbr %>"><%= state.full_name %></li>
+
+<% }); %>
+</ul>

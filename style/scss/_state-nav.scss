@@ -1,0 +1,116 @@
+.state-nav-close-button {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 1000;
+}
+
+.state-nav-toggle {
+  cursor: pointer;
+  // position: absolute;
+  // right: 10px;
+  // top: 40px;
+  z-index: 1000;
+  &.button {
+    width: 12em;
+  }
+}
+
+.state-nav {
+  background-color: rgba( 255, 255, 255, 0.8);
+  box-shadow: $shadow-standard;
+  bottom: 0;
+  min-width: 170px;
+  overflow: scroll;
+  padding: 2em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  text-align: center;
+  transition: transform 250ms ease;
+  transform: translate(0, -150%);
+  width: 100%;
+  z-index: 5000;
+  &.show{
+    transform: translate(0, 0);
+  }
+  ul {
+    list-style: none;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+  }
+
+  li {
+    cursor: pointer;
+    font-family: "Futura Today Light", Arial, sans-serif;
+    margin-bottom: 0.25em;
+    text-transform: uppercase;
+
+  }
+
+  a {
+    color: #144F71;
+    text-decoration: none;
+  }
+
+  p {
+    font-family: "Futura Today", Arial, sans-serif;
+  }
+  
+  .topic-highlight {
+    a {
+      color: $light-blue;
+    }
+    margin-bottom: 1em;
+  }
+  
+
+  .mobile-nav-close-button {
+    display: none;
+  }
+}
+
+.nav-header {
+  color: $medium-grey;
+  text-transform: uppercase;
+}
+
+
+
+.mobile-menu-button {
+  display: none;
+  font-family: "Futura Today Light", Arial, sans-serif;
+  font-size: 0.8em;
+  padding: 1em;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50px;
+ 
+}
+
+.menu-button-icon {
+  background-image: url(../img/stories-wide-sprite.png);
+  background-position: 0 -114px;
+  height: 38px;
+  margin: 0 auto;
+  width: 38px;
+
+  &:hover {
+    background-position: 0 -152px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 800px) {
+  .state-nav {
+    li {
+      font-size: 1.2em;
+      padding: 0.25em 0;
+    }
+  }
+}
+
+

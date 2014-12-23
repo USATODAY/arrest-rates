@@ -1,0 +1,116 @@
+.data-wrap {
+  background: white;
+  position: relative;
+  
+}
+
+.state-entry {
+  cursor: pointer;
+}
+
+.selected-state-id {
+  background-color: $medium-grey;
+  // border-bottom: solid $medium-grey 2px;
+  // border-radius: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  float: right;
+  padding: 0.8em;
+  &.right {
+    float: right;
+  }
+}
+
+.intro-wrap {
+  text-align: center;
+}
+
+.top-data-nav{
+  margin-bottom: 2em;
+  width: 90%;
+  @extend .group;
+}
+
+.detail-wrap {
+  font-size: 90%;
+  text-align: center;
+  .detail-header{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 1em 0 0 0;
+  }
+  .detail-abbr {
+    font-size: 1em;
+    margin: 0 0 1em 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .detail-wrap {
+      .detail-header {
+      font-size: 1em;
+      margin: .5em 0 0 0;
+    }
+  }
+  .detail-abbr {
+    font-size: 0.8em;
+  }
+
+  .top-data-nav {
+    margin: 0;
+  }
+
+  .chart-info {
+    margin: 0.5em auto;
+  }
+
+}
+
+@media (min-width: 800px) {
+  .detail-container h3 {
+    font-size: 2em;
+  }
+  .detail-numbers{
+    margin: 2em auto 0 auto;
+    width: 70%;
+
+  }
+
+  .top-data-nav {
+    width: 30em;
+    margin: 0 auto 2em auto;
+  }
+
+  
+}
+
+@media (min-width: 1100px) {
+  .detail-numbers {
+    font-size: 1.5em;
+  }
+  .detail-wrap{
+    .detail-header {
+      font-size: 1.8em;
+    }
+  }
+}
+
+.detail-container {
+  float: left;
+  width: 50%;
+  h3 {
+    margin: 0;
+  }
+}
+
+.rate-sub {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.detail-numbers {
+  @extend .group;
+  &.greater { color: $greater-color; }
+  &.less { color: $less-color; }
+  &.none { color: $none-color; }
+}

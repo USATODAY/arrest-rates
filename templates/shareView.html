@@ -1,0 +1,22 @@
+<div class="share-close-button"><img src="img/close.svg" alt="close" class="close-icon"></div>
+<h2 class="share-title">Share</h2>
+<p class="share-copy"><%= copy %></p>
+<% 
+  var encodedURL = encodeURIComponent("http://bit.ly/1qifaRE");
+  var encodedURL2 = encodeURI("http://bit.ly/1qifaRE");
+  var encodedStr = encodeURIComponent(copy);
+  var encodedTitle = encodeURIComponent("Arrests");
+  var encodedQuestion = encodeURIComponent("");
+  var fbRedirectUrl = encodeURIComponent("http://www.gannett-cdn.com/usatoday/_common/_dialogs/fb-share-done.html");
+
+  var tweetUrl = "https://twitter.com/intent/tweet?url=" + encodedURL + "&text=" + encodedStr + ""; 
+
+  var fbUrl = "javascript: var sTop=window.screen.height/2-(218);var sLeft=window.screen.width/2-(313);window.open('https://www.facebook.com/dialog/feed?display=popup&app_id=215046668549694&link=" + encodedURL2 + "&picture=http://www.gannett-cdn.com/experiments/usatoday/2014/11/arrests-interactive/img/fb-post.jpg&name=" + encodedTitle +"&description="+ copy + "&redirect_uri=http://www.gannett-cdn.com/experiments/usatoday/_common/_dialogs/fb-share-done.html','sharer','toolbar=0,status=0,width=580,height=400,top='+sTop+',left='+sLeft);Analytics.click('Facebook share');void(0);";
+
+  var emailURL = "mailto:?body=" + encodedStr +  "%0d%0d" + encodedURL +"&subject=" + encodedTitle;
+      %>
+    
+<a href="<%= tweetUrl %>" onclick="Analytics.click('Twitter Share')" class='social-link' id='twitter-share'> <img src='img/twitter.svg' alt="twitter" class="social-icon"></a>
+<a href="<%= fbUrl %>" onclick="Analytics.click('Facebook Share')"><img src='img/fb.svg' alt="twitter" class="social-icon"></a>
+<a href="<%= emailURL %>" onclick="Analytics.click('Email Share')" class="social-link" id="email-share"><img src="img/email.svg" alt="email" class="social-icon">
+  </a>

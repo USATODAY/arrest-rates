@@ -1,0 +1,180 @@
+#header {
+  position: absolute;
+  top: 0;
+  z-index: 50;
+}
+
+.page-wrap {
+  background-color: #FFFFFF;
+  bottom: 0;
+  height: 100%;
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  transition: -webkit-filter 300ms ease;
+  z-index: 5;
+
+  @media (min-width: 800px) {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 4em;
+    position: relative;
+    &.full-screen {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-height: 500px) {
+    bottom: none !important;
+  }
+}
+
+#map{
+  bottom: 0;
+  height: 50%;
+  position: absolute;
+  top: none;
+}
+
+.data-wrap {
+  height: 50%;
+  padding: 0 1em 1em 1em;
+  // overflow: hidden;
+  position: relative;
+  z-index: 10;
+  @media(min-width: 1000px) {
+    padding: 0 2em 2em 2em;
+  }
+}
+
+.full-screen {
+  .data-wrap {
+    color: white;
+    background: none;
+
+  }
+  #map {
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+  }
+}
+
+.state-view {
+  max-height: 100%;
+  position: relative;
+}
+
+.intro-wrap {
+  color: white;
+  height: 100%;
+  left: 5%;
+  margin: 0 auto;
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  width: 90%;
+  z-index: 500;
+}
+
+.intro-buttons {
+  bottom: 1em;
+  left: 5%;
+  margin: 0 auto;
+  position: absolute;
+  width: 90%;
+  .button {
+    background-color: white;
+    color: $dark-grey;
+    margin-top: 1em;
+    width: 16em;
+    transition: opacity 250ms ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.blur {
+  filter: blur(5px);
+  transition: filter 300ms ease;
+}
+
+@media (max-height: 400px) {
+  .data-wrap {
+    height: auto !important;
+  }
+  #map {
+    bottom: none !important;
+  }
+}
+
+.article-button-container {
+  bottom: 40px;
+  left: 8.6%;
+  position: absolute;
+  text-align: center;
+  width: 81%;
+  z-index: 500;
+}
+
+a.article-button {
+  background-color: #FFFFFF;
+  color: $dark-grey;
+  font-size: 0.8em;
+  opacity: 1;
+  text-decoration: none;
+  transform: translate(-50%, 0);
+  transition: opacity 300ms ease;
+  &:hover {
+    background-color: #FFFFFF;
+    opacity: 0.8;
+  }
+}
+
+span.video-button {
+  background-color: #FFFFFF;
+  color: $dark-grey;
+  font-size: 0.8em;
+  margin-right: 10px;
+  opacity: 1;
+  text-decoration: none;
+  transform: translate(-50%, 0);
+  transition: opacity 300ms ease;
+  z-index: 500;
+  &:hover {
+    background-color: #FFFFFF;
+    opacity: 0.8;
+  }
+}
+.info-button {
+  bottom: 20px;
+  cursor: pointer;
+  height: 50px;
+  position: absolute;
+  left: 10px;
+  width: 50px;
+  z-index: 500;
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.info-page {
+  @extend .share-page;
+}
+
+.info-close-button {
+  @extend .share-close-button;
+}
+
+.map-key {
+  margin: 0 auto;
+  max-width: 400px;
+  position: relative;
+  width: 95%;
+  z-index: 500;
+}

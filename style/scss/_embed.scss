@@ -1,0 +1,51 @@
+body.embed {
+  #header {
+    display: none;
+  }
+
+  .page-wrap {
+    padding-top: 0;
+  }
+
+  .detail-numbers {
+    font-size: 1.8em;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  input[type=text].state-search{
+    width: 73%;
+  }
+
+  .state-search-rsults {
+    width: 73%;
+  }
+
+  .video-inner-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  #seek-bar {
+    width: 80%;
+  }
+
+  .data-wrap {
+    height: 30%;
+  }
+
+  #map {
+    height: 70%;
+  }
+
+  .full-screen #map {
+    height: 100%;
+  }
+
+  .article-button {
+    display: none !important;
+  }
+
+
+}

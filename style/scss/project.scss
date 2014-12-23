@@ -1,0 +1,103 @@
+@import "bits";
+
+* {
+   -moz-box-sizing:    border-box;   /* Firefox 1, probably can drop this */
+   -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
+    box-sizing:        border-box;   /* Everything else */
+}
+
+
+body, div, html, {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+  @media (max-width: 800px) {
+    font-size: 90%;
+  }
+}
+
+body {
+  background-color: $extra-light-grey;
+  font-family: "Futura Today", Arial,sans-serif;
+  height: 100%;
+  @media (min-width: 800px) {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+  }
+  @media (max-height: 500px) {
+    height: none;
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.state {
+  fill: $medium-grey;
+  stroke: $light-grey;
+  stroke-width: 1px;
+}
+
+.state:hover {
+  fill: $blue;
+}
+
+svg {
+  // background-color: $light-grey;
+}
+
+.points {
+  
+  // stroke: white;
+  opacity: 0.5;
+  &.low { fill: $green; }
+  &.low-medium { fill: $yellow; }
+  &.high-medium { fill: $orange; }
+  &.high { fill: $red; }
+}
+
+.page-wrap {
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: $shadow-big;
+  padding: 0;
+}
+
+#map { 
+    width:100%; 
+    height:450px; 
+}
+
+.leaflet-overlay-pane {
+  svg{
+    background: none;
+  }
+  path {
+    fill: none !important;
+  }
+}
+
+.leaflet-popup-pane {
+  display: none !important;
+}
+
+
+
+@import "card";
+@import "buttons";
+@import "data-wrap";
+@import "state-nav";
+@import "input";
+@import "typography";
+@import "search-results";
+@import "layout";
+@import "video";
+@import "share";
+@import "embed";

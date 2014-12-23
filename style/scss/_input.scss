@@ -1,0 +1,23 @@
+input[type=text].state-search {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px $medium-grey;
+  // border-radius: 10px !important;
+  // box-shadow: $shadow-standard;
+  color: $dark-grey;
+  font-family: "Futura Today", Arial,sans-serif;
+  font-size: 1.2em;
+  float: right;
+  margin: 0;
+  // margin-right: 5%;
+  padding: .5em;
+  border-radius: 0px;
+  width: 70%;
+
+}
+
+@media (min-width: 800px) {
+  input[type=text].state-search {
+    width: 20em;
+  }
+}
+
